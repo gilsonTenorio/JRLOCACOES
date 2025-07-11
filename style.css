@@ -109,13 +109,15 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* Aumentado de 250px para 300px */
   gap: 20px;
 }
 
+
 .card {
   background: #f0f0f0;
-  padding: 20px;
+  padding: 40px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -133,8 +135,7 @@ footer {
 
 /* Login page */
 
-.login-body
-.login-container {
+.login-body .login-container {
   display: flex;
   flex-direction: row;
   background: #f9f9f9;
@@ -284,5 +285,65 @@ footer {
   .login-form {
     padding: 30px 20px;
     width: 100%;
+  }
+}
+
+
+
+
+
+/* menu hamburguer */
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: orange;
+  margin-left: auto;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 20px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    background: darkorange;
   }
 }

@@ -7,7 +7,6 @@
   <title>Portal Veículos</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -16,17 +15,19 @@
       <img src="img/logo.png" alt="Logo" class="logo" />
       <span class="logo-text">JR LOCAÇÕES</span>
     </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#veiculos">Veículos</a></li>
-        <li><a href="#equipamentos">Equipamentos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="nav-wrapper">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#veiculos">Veículos</a></li>
+          <li><a href="#equipamentos">Equipamentos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="https://jrjellocacoes.com.br/admin/index.php">Login</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
 
   <section class="carousel">
     <div class="slides">
@@ -39,38 +40,37 @@
   <section id="veiculos" class="galeria">
     <h2>Veículos Disponíveis</h2>
     <div class="grid">
-
       <div class="card">
-        <img src="img/renegade.jpg" alt="Hyundai HB20" class="car-img" />
-        <h3>Hyundai HB20</h3>
+        <img src="img/renegade_at.jpg" alt="Chevrolet Onix" class="car-img" />
+        <h3>Chevrolet Onix</h3>
       </div>
 
       <div class="card">
         <img src="img/onix.jpg" alt="Chevrolet Onix" class="car-img" />
         <h3>Chevrolet Onix</h3>
       </div>
-
       <div class="card">
-        <img src="img/renegade.jpg" alt="Jeep Renegade" class="car-img" />
-        <h3>Jeep Renegade</h3>
+        <img src="img/renegade_at.jpg" alt="Chevrolet Onix" class="car-img" />
+        <h3>Chevrolet Onix</h3>
+      </div>
+      <div class="card">
+        <img src="img/onix.jpg" alt="Chevrolet Onix" class="car-img" />
+        <h3>Chevrolet Onix</h3>
       </div>
 
-    </div>
-  </section>
-
-
-  <section id="equipamentos" class="galeria">
-    <h2>Equipamentos Disponíveis</h2>
-    <div class="grid">
-      <div class="card">Equipamento 1</div>
-      <div class="card">Equipamento 2</div>
-      <div class="card">Equipamento 3</div>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Portal Veículos. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
 </body>
 
 </html>
